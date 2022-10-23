@@ -4,18 +4,18 @@
 ```mermaid
 
   graph LR
-   subgraph N
-   a --- b
-   b --- c
+   subgraph Crime
+   Area --- Transport
+   Transport --- Bus Route
    end
   
-   subgraph M
-   d --- e
-   e --- f
+   subgraph Suspect 1
+   Home --- Relative
+   Relative --- Friend
    end
   
-   a --- d
-   a --- e
+   Area --- Home
+   Area --- Friend
 
 ```
 
