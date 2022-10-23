@@ -1,3 +1,4 @@
+```mermaid
 graph LR
   subgraph N
   a --- b
@@ -11,3 +12,4 @@ graph LR
 
   a --- d
   a --- e
+```
