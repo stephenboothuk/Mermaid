@@ -1,6 +1,9 @@
 # Markdown Cheat Sheet
 
-View raw source to see how effects are achieved.
+View raw source (on GitHub select the edit function (if available, else download and view in a text editor 
+like VIM or Norepad) to see how effects are achieved.
+
+This cheatsheet filched from [The Markdown Guide](https://www.markdownguide.org)!
 
 This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. 
 It can’t cover every edge case, so if you need more information about any of these elements, 
