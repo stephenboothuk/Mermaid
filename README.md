@@ -1,5 +1,6 @@
 # Mermaid
 
+## Example Graph DB Model (graph.md)
 ```mermaid
 
   graph LR
