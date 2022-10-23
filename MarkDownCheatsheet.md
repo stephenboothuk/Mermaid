@@ -1,7 +1,8 @@
 # Markdown Cheat Sheet
 
 View raw source (on GitHub select the edit function, if available, else download and view in a text editor 
-like VIM or Notepad) to see how effects are achieved.
+like VIM or Notepad) to see how effects are achieved.  Note that not all of the Extended Syntax is supported
+on GitHub.
 
 This cheatsheet filched from [The Markdown Guide](https://www.markdownguide.org)!
 
