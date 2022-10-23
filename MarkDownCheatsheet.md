@@ -1,7 +1,7 @@
 # Markdown Cheat Sheet
 
-View raw source (on GitHub select the edit function (if available, else download and view in a text editor 
-like VIM or Norepad) to see how effects are achieved.
+View raw source (on GitHub select the edit function, if available, else download and view in a text editor 
+like VIM or Notepad) to see how effects are achieved.
 
 This cheatsheet filched from [The Markdown Guide](https://www.markdownguide.org)!
 
