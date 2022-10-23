@@ -1,6 +1,6 @@
 # Mermaid
 
-``` Mermaid
+```mermaid
 
   graph LR
    subgraph N
