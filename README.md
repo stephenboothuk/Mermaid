@@ -6,10 +6,10 @@
   graph LR
    subgraph Crime
    Area --- Transport
-   Transport --- Bus Route
+   Transport --- Bus_Route
    end
   
-   subgraph Suspect 1
+   subgraph Suspect_1
    Home --- Relative
    Relative --- Friend
    end
