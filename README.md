@@ -5,7 +5,7 @@
 
   graph LR
    subgraph Crime
-   Area --- Transport
+   Victim --- Transport
    Transport --- Bus_Route
    end
   
@@ -14,8 +14,8 @@
    Relative --- Friend
    end
   
-   Area --- Home
-   Area --- Friend
+   Victim --- Home
+   Victim --- Friend
 
 ```
 
