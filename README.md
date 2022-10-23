@@ -14,8 +14,8 @@
    Relative --- Friend
    end
   
-   Victim |SeenAt| --- Home
-   Victim |KnownTo| --- Friend
+   Victim --- Home
+   Victim --- Friend
 
 ```
 
