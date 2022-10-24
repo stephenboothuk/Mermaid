@@ -1,6 +1,25 @@
 # Mermaid
 
-## Example Graph DB Model (graph.md)
+## Abstract Example Graph DB Model (graph.md)
+```mermaid
+graph LR
+  subgraph N
+  a --- b
+  b --- c
+  end
+
+  subgraph M
+  d --- e
+  e --- f
+  end
+
+  a --- d
+  a --- e
+```
+
+
+## Simple Crime Example (graph2.md)
+
 This models a very simple Graph Database for a crime, graph databases are often used in criminal investigation and security operations to reflect real world links between things and many example models reflect this.
 
 These often follow what is called a POLE model:
