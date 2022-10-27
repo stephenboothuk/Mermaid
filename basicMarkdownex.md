@@ -24,11 +24,10 @@ them by putting a backslash \(\\\) in front of them\:
 Some implementations of Markdown viewer will also render HTML tags, but others will not.
 
 The main advantages of Markdown over WYSIWYG word processors such as Word or Pages include\:
--  Being plain text Markdown documents can be edited on pretty much any platform including web based editors \(files 
-in this project have been created direct on GitHub, on a Windows 10 PC, a Windows 11 PC, a MacBook and an iPad\)
+-  Being plain text Markdown documents can be edited on pretty much any platform, including web based editors, where you can edit plain text \(files in this project have been created direct on GitHub, on a Windows 10 PC, a Windows 11 PC, a MacBook and an iPad\)
 -  Being plain text the files are likley to be accessible long after propietary formats used in WYSIWYG wordprocessors have faded into history
 -  Files tend to be smaller than the equivalent WYSIWYG files
--  If for some reason you don't have access to a Markdown viewer, the text is readable ad formatting is mostly inferrable.
+-  If for some reason you don't have access to a Markdown viewer, the text is readable and formatting is mostly inferrable.
 -  If part of a file gets corrupted the rest of the file is still readable
 -  The format is extendable, for example Mermaid is an extention of Markdown that allows charts and images to be produced, so long as the viewers support the extention
 
@@ -36,16 +35,22 @@ Key disadvantages include\:
 - Not as fully featured as most WYSIWYG workprocessors 
 - A bit of learning curve to become competent, but less than say HTML or LaTeX
 - Have to write your text with the control symbols then run the file through a viewer to see the effect, 
-although plugins for common IDEs such as VS.Code and onoine editors often provide a preview pane
+although plugins for common IDEs such as VS.Code and online editors often provide a preview pane
 -  Can be a bit fussy about white\-space
--  May render slightly differently in different viewers, although it will still be comprehensible, 
-  a heading 1 will still visibly higher level than a heading two but how that is achieved may differ
-  and you cannot dictate the viewer renders elements \(e.g. the font used or the style of bullet in a list\)
+-  May render slightly differently in different viewers, although it will still be comprehensible, a heading one will still visibly higher level than a heading two but how that is achieved may differ and you cannot dictate the viewer renders elements \(e.g. the font used or the style of bullet in a list\)
 
 ## Headings
 
 To make a line of text a heading just start the line with a \#, Markdown supports 5 levels of heading, 
-level 1 uses a single \# and each \# you add up to \#\#\#\#\# takes it down one level
+level 1 uses a single \# and each \# you add up to \#\#\#\#\# takes it down one level e.g.\;
+
+```
+# Heading 1 - \#
+## Heading 2 - \#\#
+### Heading 3 - \###
+#### Heading 4 - \####
+##### Heading 5 - \#####
+```
 
 # Heading 1 - \#
 ## Heading 2 - \#\#
@@ -59,6 +64,10 @@ level 1 uses a single \# and each \# you add up to \#\#\#\#\# takes it down one 
 
 To make text bold, enclose it in a pair of astrisks, \*\*, or underscores, \_\_\.
 
+```
+**The quick brown fox jumps over the lazy dog.**
+__The quick brown fox jumps over the lazy dog.__
+```
 
 **The quick brown fox jumps over the lazy dog.**
 __The quick brown fox jumps over the lazy dog.__
@@ -67,6 +76,10 @@ __The quick brown fox jumps over the lazy dog.__
 
 To make text italic, enclose it in a single asterisk, \*, or underscore, \_\.
 
+```
+*The quick brown fox jumps over the lazy dog.*
+_The quick brown fox jumps over the lazy dog._
+```
 
 *The quick brown fox jumps over the lazy dog.*
 _The quick brown fox jumps over the lazy dog._
@@ -77,11 +90,15 @@ _The quick brown fox jumps over the lazy dog._
 
 You can combine both, \*\*\_ or \_\_\*, to get bold and italic text\.
 
+```
+**_The quick brown fox jumps over the lazy dog._**
+```
+
 **_The quick brown fox jumps over the lazy dog._**
 
 ### Strike-Through
 
-To ~~strke-through~~ text just put it between two pairs of the tilde (\~) symbol, e.g. \~\~strike-through\~\~
+To ~~strke-through~~ text just put it between two pairs of the tilde (\~) symbol, e.g. `~~strike-through~~`
 
 
 ## Tables
@@ -96,6 +113,14 @@ To control the alignment of items in a table you can create the **second row** o
 -  Centre Alignment \- \:\-\:
 -  Right Alignment \- \-\:
 
+```
+| Default | Left align | Center align | Right align |
+| - | :- | :-: | -: |
+| 9999999999 | 9999999999 | 9999999999 | 9999999999 |
+| 999999999 | 999999999 | 999999999 | 999999999 |
+| 99999999 | 99999999 | 99999999 | 99999999 |
+| 9999999 | 9999999 | 9999999 | 9999999 |
+```
 
 
 
@@ -110,8 +135,11 @@ To control the alignment of items in a table you can create the **second row** o
 
 To include text as a block quote \(e.g. a block of text from a document or communication\), start each line with a breather than symbol, />\.
 
-e.g. \> This text is blockquoted  
+e.g. \:
+```
+\> This text is blockquoted  
 \>\> This text if blockquoted two levels
+```
 
 > This text is blockquoted
 >> This text if blockquoted two levels
@@ -122,13 +150,15 @@ e.g. \> This text is blockquoted
 
 An unordered \(bulleted\) list can be created by starting each line in the list with a hyphen, \-, if the list has multiple levels 
 \(some list items break down into further detail) this can be achieved by indenting the detail items.  Depending on the Markdown 
-viewer used the detail items may use a visually different bullet but it is not possoble to control what is used.
+viewer used the detail items may use a visually different bullet but it is not possoble to control what is used, e.g.\:
 
-e.g. \- first item  
-\- second item  
-  \- detail of second item. 
-  \- etc  
-\- third item
+```
+- first item
+- second item  
+  - detail of second item. 
+  - etc  
+- third item
+```
 
 - first item
 - second item
@@ -194,13 +224,12 @@ This is some `code`
 
 To include a block of code, e.g. a fragment of a script, commands that you want a user to enter as is or something that you don't want the Markdown viewer to interpret, enclose the block between two lines that just contain three backticks \(\`\`\`), e.g.
 
-\`\`\`
-
+````
+```
 Some code
-
 Next line of code
-
-\`\`\`
+```
+````
 
 ```
 Some code
