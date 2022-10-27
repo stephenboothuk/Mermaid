@@ -101,6 +101,9 @@ term
 
 ~~The world is flat.~~
 
+
+~~struck through with tilde~~
+
 ### Task List
 
 - [x] Write the press release
