@@ -93,7 +93,9 @@ To control the alignment of items in a table you can create the **second row** o
 -  Centre Alignment \- \:\-\:
 -  Right Alignment \- \-\:
 
+## Strike-Through
 
+To ~~strke-through~~ text just put it between two pairs of the tilde (\~) symbol, e.g. \~\~strike-through\~\~
 
 
 | Default | Left align | Center align | Right align |
