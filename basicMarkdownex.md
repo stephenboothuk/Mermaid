@@ -2,7 +2,7 @@
 
 Markdown is a simple text formatting language similar to HTML or LaTeX, but trading reduced functionality for simplicity and a short learning curve\.  Markdown is quite similar to original HTML in intent, as a content creator you don't think about the details of the final appearence but leave that up to the user's device and the software they use.
 
-Markdown has gained most traction in producing documentation for open source projects, in partiular on GitHub where each project is automatically created with a readme\.md (\.md is the file extension for a Markdown file) in it's root for documenting the project and offering guidance to potential users and contributors, and most user documentation is also produced in Markdown\.  Additonally, a number of note taking apps, such as Obsidian and Bear, use Markdown as their file storage format\.  This has the, no doubt unintended, benefit of if you stop using the app or are on a device where you can't access the app but can still access the files \(by default Obsidian and Bear store their files on iCloud\) youc an still access the content.
+Markdown has gained most traction in producing documentation for open source projects, in partiular on GitHub where each project is automatically created with a readme\.md (\.md is the file extension for a Markdown file) in it's root for documenting the project and offering guidance to potential users and contributors, and most user documentation is also produced in Markdown\.  Additonally, a number of note taking apps, such as Obsidian and Bear, use Markdown as their file storage format\.  This has the, no doubt unintended, benefit of if you stop using the app or are on a device where you can't access the app but can still access the files \(by default Obsidian and Bear store their files on iCloud\) you can still access the content.
 
 Much like LaTeX a single carriage return does not start a new line in the output, unless you add two spaces to the end of the line or the new line starts with a control symbol\.
 
@@ -292,3 +292,91 @@ graph LR
 ```
 
 to render the diagram\.
+
+###Diagrams \(Mermaid\)
+
+A variety of basic diagrams can be produced in Markdown through the use of the **Markdown** extension to the language.  Some Markdown editors and viewers (such as the one built into Github) have Mermaid support built in whilst others \(e.g. VS.code\) will require a plugin\.  If the diagram is required for a non-Markdown document then you may wish to use the online Mermaid editior Mermaid.Live \(https://mermaid.live/\) and export to a graphic using Kroki \(via a button in the *Actions* panel\).  
+
+Examples of Mermaid diagrams include:
+####Graph
+
+A graph database stores descriptions of *entities* and the *relationships* between them\.  The below gives a diagram with an example of a crime investigation graph based on POLE (Person-Object-Location-Event) model\.
+````
+```mermaid
+
+  graph LR
+   subgraph Crime
+   Victim --- Bus
+   Bus --- BusRoute
+   end
+  
+   subgraph Suspect_1
+   Home --- Relative
+   Relative --- Friend
+   end
+   
+   subgraph MobilePhone
+   SamsungJ10 --- PawnBroker
+   SamsungJ10 --- IMIE12345
+   end
+  
+   Victim --- Home
+   Victim --- Friend
+   Victim --- SamsungJ10
+   PawnBroker --- Home
+   Relative --- PawnBroker
+
+```
+````
+
+```mermaid
+
+  graph LR
+   subgraph Crime
+   Victim --- Bus
+   Bus --- BusRoute
+   end
+  
+   subgraph Suspect_1
+   Home --- Relative
+   Relative --- Friend
+   end
+   
+   subgraph MobilePhone
+   SamsungJ10 --- PawnBroker
+   SamsungJ10 --- IMIE12345
+   end
+  
+   Victim --- Home
+   Victim --- Friend
+   Victim --- SamsungJ10
+   PawnBroker --- Home
+   Relative --- PawnBroker
+
+```
+
+Note that if using the Mermaid.Live editor you should leave off the the rails.
+
+###User Journey
+
+```mermaid
+journey
+    title PRINCE2 
+    section Book Training
+      Go to Website: 5: Me
+      Enter Details: 3: Me
+	  Pay for Course: 1: Me
+      Process Application: 5: Training Provider
+    section Attend Training
+      Go to Venue: 3: Me
+      Drink Coffee: 5: Me
+	  Deliver Course: 5: Training Provider
+	  Do Course: 2: Me
+	  Sit Exam: 1: Me
+	  Pass Exam: 5: Me
+	section Post Training
+		Get Certificate: 5: Me
+		Realise I won't earn more: 1: Me
+		Cash Cheque: 5: Training Provider
+```
+
