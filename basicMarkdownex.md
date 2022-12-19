@@ -368,19 +368,19 @@ journey
     section Book Training
       Go to Website: 5: Me
       Enter Details: 3: Me
-	  Pay for Course: 1: Me
+      Pay for Course: 1: Me
       Process Application: 5: Training Provider
     section Attend Training
       Go to Venue: 3: Me
       Drink Coffee: 5: Me
-	  Deliver Course: 5: Training Provider
-	  Do Course: 2: Me
-	  Sit Exam: 1: Me
-	  Pass Exam: 5: Me
-	section Post Training
-		Get Certificate: 5: Me
-		Realise I won't earn more: 1: Me
-		Cash Cheque: 5: Training Provider
+      Deliver Course: 5: Training Provider
+      Do Course: 2: Me
+      Sit Exam: 1: Me
+      Pass Exam: 5: Me
+    section Post Training
+    Get Certificate: 5: Me
+    Realise I won't earn more: 1: Me
+    Cash Cheque: 5: Training Provider
 ```
 ````
 
@@ -414,11 +414,11 @@ High level overview of a process as a set of interactions between two or more ac
 sequenceDiagram
     Alice->>+John: Hello John, how are you?
     Alice->>+John: John, can you hear me?
-	John-->>-Alice: Alice, if your're talking you're on mute
-	Alice->>-John: John, can you hear me now?
-    John-->>-Alice: Hi Alice, I can hear you!
-	Alice->>+John: Hello John, how are you?
-    John-->>-Alice: I feel great!
+    John->>-Alice: Alice, if your're talking you're on mute
+    Alice->>-John: John, can you hear me now?
+    John->>-Alice: Hi Alice, I can hear you!
+    Alice->>+John: Hello John, how are you?
+    John->>-Alice: I feel great!
 ```
 ````
 
