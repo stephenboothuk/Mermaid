@@ -414,7 +414,7 @@ High level overview of a process as a set of interactions between two or more ac
 sequenceDiagram
     Alice->>+John: Hello John, how are you?
     Alice->>+John: John, can you hear me?
-    John->>-Alice: Alice, if your're talking you're on mute
+    John->>+Alice: Alice, if your're talking you're on mute
     Alice->>-John: John, can you hear me now?
     John->>-Alice: Hi Alice, I can hear you!
     Alice->>+John: Hello John, how are you?
@@ -426,7 +426,7 @@ sequenceDiagram
 sequenceDiagram
     Alice->>+John: Hello John, how are you?
     Alice->>+John: John, can you hear me?
-    John->>-Alice: Alice, if your're talking you're on mute
+    John->>+Alice: Alice, if your're talking you're on mute
     Alice->>-John: John, can you hear me now?
     John->>-Alice: Hi Alice, I can hear you!
     Alice->>+John: Hello John, how are you?
