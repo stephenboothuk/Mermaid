@@ -426,11 +426,11 @@ sequenceDiagram
 sequenceDiagram
     Alice->>+John: Hello John, how are you?
     Alice->>+John: John, can you hear me?
-	John-->>-Alice: Alice, if your're talking you're on mute
-	Alice->>-John: John, can you hear me now?
-    John-->>-Alice: Hi Alice, I can hear you!
-	Alice->>+John: Hello John, how are you?
-    John-->>-Alice: I feel great!
+    John->>-Alice: Alice, if your're talking you're on mute
+    Alice->>-John: John, can you hear me now?
+    John->>-Alice: Hi Alice, I can hear you!
+    Alice->>+John: Hello John, how are you?
+    John->>-Alice: I feel great!
 ```
 
 This second example shows a, simplified, interaction between a customer, an Automated Teller Machine (aka a Cashpoint) and the backend systems at a bank (Accounts).
