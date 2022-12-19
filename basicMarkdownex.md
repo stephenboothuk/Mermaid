@@ -36,7 +36,7 @@ Key disadvantages include\:
 - A bit of learning curve to become competent, but less than say HTML or LaTeX
 - Have to write your text with the control symbols then run the file through a viewer to see the effect, 
 although plugins for common IDEs such as VS.Code and online editors often provide a preview pane
--  Can be a bit fussy about white\-space
+-  Can be a bit fussy about white\-space \(especially spaces after control sequences\)
 -  May render slightly differently in different viewers, although it will still be comprehensible, a heading one will still visibly higher level than a heading two but how that is achieved may differ and you cannot dictate the viewer renders elements \(e.g. the font used or the style of bullet in a list\)
 
 ## Headings
@@ -60,7 +60,7 @@ level 1 uses a single \# and each \# you add up to \#\#\#\#\# takes it down one 
 
 ## Emphasis
 
-###Bold
+### Bold
 
 To make text bold, enclose it in a pair of astrisks, \*\*, or underscores, \_\_\.
 
@@ -71,8 +71,8 @@ __The quick brown fox jumps over the lazy dog.__
 
 **The quick brown fox jumps over the lazy dog.**
 __The quick brown fox jumps over the lazy dog.__
-
-###Italic
+ 
+### Italic
 
 To make text italic, enclose it in a single asterisk, \*, or underscore, \_\.
 
@@ -133,7 +133,7 @@ To control the alignment of items in a table you can create the **second row** o
 
 ## Block Quotes
 
-To include text as a block quote \(e.g. a block of text from a document or communication\), start each line with a breather than symbol, />\.
+To include text as a block quote \(e.g. a block of text from a document or communication\), start each line with a greater than symbol, />\.
 
 e.g. \:
 ```
@@ -357,7 +357,9 @@ A graph database stores descriptions of *entities* and the *relationships* betwe
 
 Note that if using the Mermaid.Live editor you should leave off the the rails.
 
-### User Journey
+#### User Journey
+
+User Journeys are commonly used in Agile to give a high level overview of a process from the perspective of the user, typically including how the user feels at each point to identify pain points.  The below gives a, somewhat tongue in cheek, example of the user journey for getting PRINCE2 qualified\.
 
 ````
 ```mermaid
@@ -403,3 +405,64 @@ journey
 		Cash Cheque: 5: Training Provider
 ```
 
+#### Sequence Diagram
+
+High level overview of a process as a set of interactions between two or more actors.  As these can be viewed as a conversation, the first example shows a conversation between two people:
+
+````
+```mermaid
+sequenceDiagram
+    Alice->>+John: Hello John, how are you?
+    Alice->>+John: John, can you hear me?
+	John-->>-Alice: Alice, if your're talking you're on mute
+	Alice->>-John: John, can you hear me now?
+    John-->>-Alice: Hi Alice, I can hear you!
+	Alice->>+John: Hello John, how are you?
+    John-->>-Alice: I feel great!
+```
+````
+
+```mermaid
+sequenceDiagram
+    Alice->>+John: Hello John, how are you?
+    Alice->>+John: John, can you hear me?
+	John-->>-Alice: Alice, if your're talking you're on mute
+	Alice->>-John: John, can you hear me now?
+    John-->>-Alice: Hi Alice, I can hear you!
+	Alice->>+John: Hello John, how are you?
+    John-->>-Alice: I feel great!
+```
+
+This second example shows a, simplified, interaction between a customer, an Automated Teller Machine (aka a Cashpoint) and the backend systems at a bank (Accounts).
+
+````
+```mermaid
+sequenceDiagram
+    Customer->>+ATM: Inserts Card
+	Customer->>+ATM: Enter PIN
+	ATM->>+Customer: Notes Available
+	Customer->>ATM: Enter Amount Requested
+	ATM->>+Accounts: Check Balance
+	Accounts->>+ATM: Balance OK
+	ATM->>-Customer: Issue  Notes
+	ATM->>-Customer: Return Card
+	ATM->>+Accounts: Log Withdrawal
+```
+````
+
+```mermaid
+sequenceDiagram
+    Customer->>+ATM: Inserts Card
+	Customer->>+ATM: Enter PIN
+	ATM->>+Customer: Notes Available
+	Customer->>ATM: Enter Amount Requested
+	ATM->>+Accounts: Check Balance
+	Accounts->>+ATM: Balance OK
+	ATM->>-Customer: Issue  Notes
+	ATM->>-Customer: Return Card
+	ATM->>+Accounts: Log Withdrawal
+```
+
+#### Flowcart
+
+Flow charts show a more detailed view of a process, breaking a process down to the individual steps.
