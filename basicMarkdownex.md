@@ -293,12 +293,12 @@ graph LR
 
 to render the diagram\.
 
-###Diagrams \(Mermaid\)
+### Diagrams \(Mermaid\)
 
 A variety of basic diagrams can be produced in Markdown through the use of the **Markdown** extension to the language.  Some Markdown editors and viewers (such as the one built into Github) have Mermaid support built in whilst others \(e.g. VS.code\) will require a plugin\.  If the diagram is required for a non-Markdown document then you may wish to use the online Mermaid editior Mermaid.Live \(https://mermaid.live/\) and export to a graphic using Kroki \(via a button in the *Actions* panel\).  
 
 Examples of Mermaid diagrams include:
-####Graph
+#### Graph
 
 A graph database stores descriptions of *entities* and the *relationships* between them\.  The below gives a diagram with an example of a crime investigation graph based on POLE (Person-Object-Location-Event) model\.
 ````
@@ -357,7 +357,30 @@ A graph database stores descriptions of *entities* and the *relationships* betwe
 
 Note that if using the Mermaid.Live editor you should leave off the the rails.
 
-###User Journey
+### User Journey
+
+````
+```mermaid
+journey
+    title PRINCE2 
+    section Book Training
+      Go to Website: 5: Me
+      Enter Details: 3: Me
+	  Pay for Course: 1: Me
+      Process Application: 5: Training Provider
+    section Attend Training
+      Go to Venue: 3: Me
+      Drink Coffee: 5: Me
+	  Deliver Course: 5: Training Provider
+	  Do Course: 2: Me
+	  Sit Exam: 1: Me
+	  Pass Exam: 5: Me
+	section Post Training
+		Get Certificate: 5: Me
+		Realise I won't earn more: 1: Me
+		Cash Cheque: 5: Training Provider
+```
+````
 
 ```mermaid
 journey
