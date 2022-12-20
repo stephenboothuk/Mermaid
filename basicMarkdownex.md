@@ -522,3 +522,75 @@ flowchart TD
 	Q --> R[Stir Tea]
 	R --> S[Enjoy]
 ```
+
+#### Class Diagrams
+
+Class diagrams are a type of UML diagram that describes classes in Object-Oriented Programming.  The below describes a simplified fragment of a HR system with a superclass Employee and two subclasses, Manager and Salesperson.  Each class has a name, a list of attributes (variables) and a list of methods (functions).  An object of class Employee has all of the attributes and methods of the Employee class but not of the Manager or Salesperson classes.  An object of the class Manager inherits the attributes and methods of the Employee class and additionally has those of the Manager class but not those the Salesperson class.  Similarly an object of the Salesperson class inherits the attributes and methods of the Employee class and additionally has those of Salesperson class but not of the Manager class.
+
+````
+```mermaid
+classDiagram
+	Employee <|-- Manager
+	Employee <|-- Salesperson
+	Employee : +String Name
+	Employee : +String ManagedBy
+	Employee : +Float Salary
+	Employee : +Date StartDate
+	Employee : +Date EndDate
+	Employee : +Bool Employed
+	Employee : +Employee()
+	Employee : +onBoard()
+	Employee : +dismiss()
+	Employee : +changeName()
+	Employee : +setSalary()
+	Employee : +calculatePay()
+	class Manager{
+		+String TeamName
+		+Float Budget
+		+Manager()
+		+assignBudget()
+	}
+	class Salesperson{
+		+Float Commission
+		+Float salesVolume
+		+Salesperson()
+		+setCommissionPercentage()
+		+calculateCommissionAmount()
+		+calculatePay()
+	}
+```
+````
+```mermaid
+classDiagram
+	Employee <|-- Manager
+	Employee <|-- Salesperson
+	Employee : +String Name
+	Employee : +String ManagedBy
+	Employee : +Float Salary
+	Employee : +Date StartDate
+	Employee : +Date EndDate
+	Employee : +Bool Employed
+	Employee : +Employee()
+	Employee : +onBoard()
+	Employee : +dismiss()
+	Employee : +changeName()
+	Employee : +setSalary()
+	Employee : +calculatePay()
+	class Manager{
+		+String TeamName
+		+Float Budget
+		+Manager()
+		+assignBudget()
+	}
+	class Salesperson{
+		+Float Commission
+		+Float salesVolume
+		+Salesperson()
+		+setCommissionPercentage()
+		+calculateCommissionAmount()
+		+calculatePay()
+	}
+```
+
+You may notice that both the Employee and Salesperson classes have a method called calculatePay().  This is an example of overloading, for a Salesperson object the Salesperson.calculatePay() method overrides the one inherited from Employee.  This might be used because an employee gets a basic salary so the Employee.calculatePay() method just uses the Salary attribute to calculate the pay whilst a salesperson get commission on their sales so Salesperson.calculatePay() uses the salary and the commission earned (possibly using a call to calculateCommissionAmount() which uses the Commission and salesVolume attributes to calculate the commmission earned) to calculate the pay.
+
