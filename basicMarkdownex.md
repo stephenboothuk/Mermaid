@@ -465,4 +465,60 @@ sequenceDiagram
 
 #### Flowcart
 
-Flow charts show a more detailed view of a process, breaking a process down to the individual steps.
+Flow charts show a more detailed view of a process, breaking a process down to the individual steps.  This example shows the proper procedure for making a cup of tea
+
+````
+```mermaid
+flowchart TD
+    A[Start] --> B{Tea?}
+	B --> |Yes| C[Get Cup] & D[Fill and Put Kettle On]
+        B --> U[OK, Maybe Later]
+	C --> E{Milk?}
+	E --o |Yes| F[Add Milk to Cup]
+	E --x |No| G{Sugar?}
+	F --> G
+	G --o |Yes| H(How Many)
+        G --x |No| I{Kettle Boiling?}
+        H --> |Number| T[Add Specified Sugar Amount to Cup]
+	T --> I
+        D --> I
+	I --> |No| J[Wait]
+	J --> I
+	I --> |Yes| K[Get Tea Pot]
+	K --> L[Add Boiling Water to Tea Pot]
+	L --> M[Empty Tea Pot]
+	M --> N[Add Tea to Tea Pot]
+	N --> O[Add Boiling Water to Tea Pot]
+	O --> P[Wait]
+	P --> Q[Pour Tea in to Cup]
+	Q --> R[Stir Tea]
+	R --> S[Enjoy]
+```
+````
+
+```mermaid
+flowchart TD
+    A[Start] --> B{Tea?}
+	B --> |Yes| C[Get Cup] & D[Fill and Put Kettle On]
+    B --> U[OK, Maybe Later]
+	C --> E{Milk?}
+	E --o |Yes| F[Add Milk to Cup]
+	E --x |No| G{Sugar?}
+	F --> G
+	G --o |Yes| H(How Many)
+    G --x |No| I{Kettle Boiling?}
+    H --> |Number| T[Add Specified Sugar Amount to Cup]
+	T --> I
+    D --> I
+	I --> |No| J[Wait]
+	J --> I
+	I --> |Yes| K[Get Tea Pot]
+	K --> L[Add Boiling Water to Tea Pot]
+	L --> M[Empty Tea Pot]
+	M --> N[Add Tea to Tea Pot]
+	N --> O[Add Boiling Water to Tea Pot]
+	O --> P[Wait]
+	P --> Q[Pour Tea in to Cup]
+	Q --> R[Stir Tea]
+	R --> S[Enjoy]
+```
