@@ -596,27 +596,61 @@ You may notice that both the Employee and Salesperson classes have a method call
 
 #### Entity Relationship Diagram
 
-
+An entity relationship diagram is commonly used int he design of databases to show the relationship between the data entities (typically the representation of real work objects and events).  In this example\:
+- Each department employes one or more employees, each employee is employed in one and only one department
+- Each role is fulfilled by zero or more employees, each employee fulfils one or more roles
+- Each post is held by zero or 1 employees, each employee holds one and only one  post
+- Each post is funded by one and only one budgets, each budget funds one or more posts
+- Each role is delivered by one or more posts, each post delivers one or more roles
+- Each employee manages zero or more other employees, each employee is managed by one and only one other employee
+- Each department provides 1 or more services, each service is delivered by one and only one departments
 
 ````
 ```mermaid
 erDiagram
-    Employee }|--|| Department : "works in"
+    Employee }|--|| Department : "employed in"
 	Employee }o--|{ Role : fulfils
-	Employee }o--|| Post : Holds
+	Employee |o--|| Post : Holds
 	Budget ||--|{Post : Funds
-	Post ||--|{ Role : delivers
-	Employee ||--|{ Employee : Manages
+	Post }|--|{ Role : delivers
+	Employee ||--o{ Employee : Manages
 	Department ||--|{ Service : Provides
 ```
 ````
 ```mermaid
 erDiagram
-    Employee }|--|| Department : "works in"
+       Employee }|--|| Department : "employed in"
 	Employee }o--|{ Role : fulfils
-	Employee }o--|| Post : Holds
+	Employee |o--|| Post : Holds
 	Budget ||--|{Post : Funds
-	Post ||--|{ Role : delivers
-	Employee ||--|{ Employee : Manages
+	Post }|--|{ Role : delivers
+	Employee ||--o{ Employee : Manages
 	Department ||--|{ Service : Provides
+```
+
+#### State Diagram
+
+````
+```mermaid
+stateDiagram-v2 Invoice
+    [*] --> Written
+	Written --> Approved
+	Approved --> Issued
+	Issued --> Pending
+	Pending --> Queried
+	Queried --> Issued
+	Pending --> Paid
+	Paid --> [*]
+```
+````
+```mermaid
+stateDiagram-v2 Invoice
+    [*] --> Written
+	Written --> Approved
+	Approved --> Issued
+	Issued --> Pending
+	Pending --> Queried
+	Queried --> Issued
+	Pending --> Paid
+	Paid --> [*]
 ```
