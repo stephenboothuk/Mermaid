@@ -555,7 +555,7 @@ classDiagram
 		+Float salesVolume
 		+Salesperson()
 		+setCommissionPercentage()
-		+calculateCommissionAmount()
+		-calculateCommissionAmount()
 		+calculatePay()
 	}
 ```
@@ -595,3 +595,28 @@ classDiagram
 You may notice that both the Employee and Salesperson classes have a method called calculatePay().  This is an example of overloading, for a Salesperson object the Salesperson.calculatePay() method overrides the one inherited from Employee.  This might be used because an employee gets a basic salary so the Employee.calculatePay() method just uses the Salary attribute to calculate the pay whilst a salesperson get commission on their sales so Salesperson.calculatePay() uses the salary and the commission earned (possibly using a call to calculateCommissionAmount() which uses the Commission and salesVolume attributes to calculate the commmission earned) to calculate the pay.
 
 #### Entity Relationship Diagram
+
+
+
+````
+```mermaid
+erDiagram
+    Employee }|--|| Department : "works in"
+	Employee }o--|{ Role : fulfils
+	Employee }o--|| Post : Holds
+	Budget ||--|{Post : Funds
+	Post ||--|{ Role : delivers
+	Employee ||--|{ Employee : Manages
+	Department ||--|{ Service : Provides
+```
+````
+```mermaid
+erDiagram
+    Employee }|--|| Department : "works in"
+	Employee }o--|{ Role : fulfils
+	Employee }o--|| Post : Holds
+	Budget ||--|{Post : Funds
+	Post ||--|{ Role : delivers
+	Employee ||--|{ Employee : Manages
+	Department ||--|{ Service : Provides
+```
