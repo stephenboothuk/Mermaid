@@ -654,3 +654,10 @@ stateDiagram-v2 Invoice
 	Pending --> Paid
 	Paid --> [*]
 ```
+
+#### Conbtext Diagram
+
+A context diagram describes at a very high level the relationships a system has to other systems and to human entities (Actors), which may be users or people who are impacted someway by the system.  Context diagrams are sometimes confused with Use Case diagrams and Data Flow diagrams, but differ in key ways.  Use Case disagrams are concerned with what the systems does as a result of the interaction with the Actor/other System but Context Diagrams are only concerned with which Actors/other systems the system interacts with and the task they perform.  Data Flow diagrams are concerned with what data flows between Acrors/Systems but Context Diagrams are only concerned that data does flow between Actors/Systems.  Context Diagrams could be considered an executive summary of Use Case and Data Flow diagrams.
+
+TODO: Finish writing Mermaid for Context Diagram.
+
