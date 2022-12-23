@@ -729,7 +729,7 @@ Rel(sysTrans, sysRooms, "Confirms/Denies Charge")
 BiRel(sysRooms, sysFin, "Posts Payment")
 
 UpdateElementStyle(perGuest, $fontColor="red", $bgColor="grey", $borderColor="red")
-UpdateRelStyle(sysTrans, sysCard, $textColor="blue", $lineColor="blue", $offsetY="-40", $offsetX="-50")
+UpdateRelStyle(sysTrans, sysCard, $textColor="blue", $lineColor="blue", $offsetY="40", $offsetX="50")
 UpdateRelStyle(sysCard, sysTrans, $textColor="blue", $lineColor="blue", $offsetY="-40", $offsetX="-50")
 ```
 
