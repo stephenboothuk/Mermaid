@@ -596,10 +596,10 @@ You may notice that both the Employee and Salesperson classes have a method call
 
 #### Entity Relationship Diagram
 
-An entity relationship diagram is commonly used int he design of databases to show the relationship between the data entities (typically the representation of real work objects and events).  In this example\:
+An entity relationship diagram is commonly used in the design of databases to show the relationship between the data entities (typically the representation of real work objects and events).  In this example\:
 - Each department employes one or more employees, each employee is employed in one and only one department
 - Each role is fulfilled by zero or more employees, each employee fulfils one or more roles
-- Each post is held by zero or 1 employees, each employee holds one and only one  post
+- Each post is held by zero or 1 employees, each employee holds one and only one post
 - Each post is funded by one and only one budgets, each budget funds one or more posts
 - Each role is delivered by one or more posts, each post delivers one or more roles
 - Each employee manages zero or more other employees, each employee is managed by one and only one other employee
@@ -655,7 +655,7 @@ stateDiagram-v2 Invoice
 	Paid --> [*]
 ```
 
-#### Conbtext Diagram
+#### Context Diagram
 
 A context diagram describes at a very high level the relationships a system has to other systems and to human entities (Actors), which may be users or people who are impacted someway by the system.  Context diagrams are sometimes confused with Use Case diagrams and Data Flow diagrams, but differ in key ways.  Use Case disagrams are concerned with what the systems does as a result of the interaction with the Actor/other System but Context Diagrams are only concerned with which Actors/other systems the system interacts with and the task they perform.  Data Flow diagrams are concerned with what data flows between Acrors/Systems but Context Diagrams are only concerned that data does flow between Actors/Systems.  Context Diagrams could be considered an executive summary of Use Case and Data Flow diagrams.  This example gives an overview of a room booking process where bookings can be made by a Hotel Clerk or a propective Hotel Guest via the room booking system.  In either case the guest's credit card details are taken and their card charged via a bank.
 
