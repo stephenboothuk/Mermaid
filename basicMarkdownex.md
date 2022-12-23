@@ -472,7 +472,7 @@ Flow charts show a more detailed view of a process, breaking a process down to t
 flowchart TD
     A[Start] --> B{Tea?}
 	B --> |Yes| C[Get Cup] & D[Fill and Put Kettle On]
-        B --> U[OK, Maybe Later]
+        B --> |No| U[OK, Maybe Later]
 	C --> E{Milk?}
 	E --o |Yes| F[Add Milk to Cup]
 	E --x |No| G{Sugar?}
@@ -500,7 +500,7 @@ flowchart TD
 flowchart TD
     A[Start] --> B{Tea?}
 	B --> |Yes| C[Get Cup] & D[Fill and Put Kettle On]
-    B --> U[OK, Maybe Later]
+    B --> |No| U[OK, Maybe Later]
 	C --> E{Milk?}
 	E --o |Yes| F[Add Milk to Cup]
 	E --x |No| G{Sugar?}
