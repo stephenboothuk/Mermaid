@@ -816,3 +816,53 @@ test_entity - satisfies -> test_req2
     test_entity3 - verifies -> test_req5
     test_req <- copies - test_entity2
 ```
+
+#### Mindmap
+
+````
+```mermaid
+mindmap
+	root((Parking Charges))
+    ::icon(fa fa-car)
+		Penalty Charge Notice
+			Issued by Police or Local Council
+			Legally Enforeable
+				Can result in points
+                Based in Law
+                ::icon(fa fa-book)
+					Terms and Conditions Presumed
+			Can be Appealed at Arbitration
+				Approximately 70\% are Overturned at Appeal
+		Parking Charge Notice
+			Issued By Private Company
+			Have to Sue to Enforce
+				Technically a Contract Violation
+			Based in Displayed Terms and Conditions
+				Terms and Conditions Must Be Visible
+			Can be Appealed to Issuer or at Arbitration
+				Approximately 94% are Overturned at Arbitration
+```
+````
+
+```mermaid
+mindmap
+	root((Parking Charges))
+    ::icon(fa fa-car)
+		Penalty Charge Notice
+			Issued by Police or Local Council
+			Legally Enforeable
+				Can result in points
+                Based in Law
+                ::icon(fa fa-book)
+					Terms and Conditions Presumed
+			Can be Appealed at Arbitration
+				Approximately 70\% are Overturned at Appeal
+		Parking Charge Notice
+			Issued By Private Company
+			Have to Sue to Enforce
+				Technically a Contract Violation
+			Based in Displayed Terms and Conditions
+				Terms and Conditions Must Be Visible
+			Can be Appealed to Issuer or at Arbitration
+				Approximately 94% are Overturned at Arbitration
+```
