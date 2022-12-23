@@ -740,6 +740,7 @@ Simple 2D pie charts can be created.
 
 ````
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'pie1': '#FFFFFF', 'pie2': '#FFFF00', 'pie3': '#00FF00', 'pie4': '#0000FF', 'pie5': '#800080', 'pie6': '#ff0000', 'pie7': '#FFA500'}}}%%
 pie title First Programming Language Learned
     "Pascal" : 126
     "BASIC" : 85
@@ -749,6 +750,7 @@ pie title First Programming Language Learned
 
 ```mermaid
 pie title First Programming Language Learned
+%%{init: {'theme': 'base', 'themeVariables': { 'pie1': '#FFFFFF', 'pie2': '#FFFF00', 'pie3': '#00FF00', 'pie4': '#0000FF', 'pie5': '#800080', 'pie6': '#ff0000', 'pie7': '#FFA500'}}}%%
     "Pascal" : 126
     "BASIC" : 85
     "C" : 25
