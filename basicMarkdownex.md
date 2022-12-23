@@ -674,12 +674,12 @@ System(sysFin, "Finance System", "Processes Credit Card Payments")
 Person(perClerk, "Hotel Clerk", "Takes bookings face to face or over the phone from guests")
 }
 
-Enterprise_Boudary(b2, "Bank Boundary"){
+
 System_Boundary(B4, "Bank Systems"){
 System(sysTrans, "Bank Transaction Processing System", "System that handles credits and debits to accounts")
 }
 System_Ext(sysCard, "Credit Card Processing System", "System that processes credit card payments, may be external to the bank")
-}
+
 
 BiRel(perClerk, sysRooms, "Makes Booking")
 Rel(perGuest, sysRooms, "Makes Booking")
