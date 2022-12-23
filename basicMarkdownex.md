@@ -827,10 +827,11 @@ mindmap
 		Penalty Charge Notice
 			Issued by Police or Local Council
 			Legally Enforeable
-				Can result in points
-                Based in Law
-                ::icon(fa fa-book)
+                Based in Law 
 					Terms and Conditions Presumed
+                    ::icon(fa fa-book)
+				Can result in points
+                ::icon(fa fa-id-card)
 			Can be Appealed at Arbitration
 				Approximately 70\% are Overturned at Appeal
 		Parking Charge Notice
@@ -844,46 +845,6 @@ mindmap
 ```
 ````
 
-```mermaid
+**GitHub does not render mindmap Mermaid.  To see this mindmap rendered, copy and paste into https://mermaid.live/**
 
-mindmap
-	root((Parking Charges))
-    	::icon(fa fa-car)
-		Penalty Charge Notice
-			Issued by Police or Local Council
-			Legally Enforeable
-				Can result in points
-                Based in Law
-                ::icon(fa fa-book)
-			Terms and Conditions Presumed
-			Can be Appealed at Arbitration
-			Approximately 70\% are Overturned at Appeal
-		Parking Charge Notice
-			Issued By Private Company
-			Have to Sue to Enforce
-				Technically a Contract Violation
-			Based in Displayed Terms and Conditions
-				Terms and Conditions Must Be Visible
-			Can be Appealed to Issuer or at Arbitration
-				Approximately 94% are Overturned at Arbitration
-```
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectivness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
+The icons shown beign used here are from a service called Font Awesome (https://fontawesome.com/v4/icons/), support varies between viewers.
