@@ -657,7 +657,45 @@ stateDiagram-v2 Invoice
 
 #### Conbtext Diagram
 
-A context diagram describes at a very high level the relationships a system has to other systems and to human entities (Actors), which may be users or people who are impacted someway by the system.  Context diagrams are sometimes confused with Use Case diagrams and Data Flow diagrams, but differ in key ways.  Use Case disagrams are concerned with what the systems does as a result of the interaction with the Actor/other System but Context Diagrams are only concerned with which Actors/other systems the system interacts with and the task they perform.  Data Flow diagrams are concerned with what data flows between Acrors/Systems but Context Diagrams are only concerned that data does flow between Actors/Systems.  Context Diagrams could be considered an executive summary of Use Case and Data Flow diagrams.
+A context diagram describes at a very high level the relationships a system has to other systems and to human entities (Actors), which may be users or people who are impacted someway by the system.  Context diagrams are sometimes confused with Use Case diagrams and Data Flow diagrams, but differ in key ways.  Use Case disagrams are concerned with what the systems does as a result of the interaction with the Actor/other System but Context Diagrams are only concerned with which Actors/other systems the system interacts with and the task they perform.  Data Flow diagrams are concerned with what data flows between Acrors/Systems but Context Diagrams are only concerned that data does flow between Actors/Systems.  Context Diagrams could be considered an executive summary of Use Case and Data Flow diagrams.  This example gives an overview of a room booking process where bookings can be made by a Hotel Clerk or a propective Hotel Guest via the room booking system.  In either case the guest's credit card details are taken and their card charged via a bank.
+
+````
+```mermaid
+C4Context
+title Hotel Room Booking
+
+
+Person(perGuest, "Hotel Guest", "Makes bookings via a website.  For the purpose of this diagram the website is not separately represented")
+
+Enterprise_Boundary(b1, "Hotel Boundary"){
+System_Boundary(B3, "Hotel Systems"){
+System(sysRooms, "Room Booking", "Allows hotel staff and guests to book rooms")
+System(sysFin, "Finance System", "Processes Credit Card Payments")
+}
+Person(perClerk, "Hotel Clerk", "Takes bookings face to face or over the phone from guests")
+}
+
+
+System_Boundary(B4, "Bank Systems"){
+System(sysTrans, "Bank Transaction Processing System", "System that handles credits and debits to accounts")
+}
+System_Ext(sysCard, "Credit Card Processing System", "System that processes credit card payments, may be external to the bank")
+
+
+BiRel(perClerk, sysRooms, "Makes Booking")
+Rel(perGuest, sysRooms, "Makes Booking")
+Rel(sysRooms, perGuest, "Confirms/Denies Booking")
+Rel(sysRooms, sysTrans, "Posts Charge")
+Rel(sysTrans, sysCard, "Queries Card Transaction")
+Rel(sysCard, sysTrans, "Affirms/Denies Card")
+Rel(sysTrans, sysRooms, "Confirms/Denies Charge")
+BiRel(sysRooms, sysFin, "Posts Payment")
+
+UpdateElementStyle(perGuest, $fontColor="red", $bgColor="grey", $borderColor="red")
+UpdateRelStyle(sysTrans, sysCard, $textColor="blue", $lineColor="blue", $offsetY="-40", $offsetX="-50")
+UpdateRelStyle(sysCard, sysTrans, $textColor="blue", $lineColor="blue", $offsetY="-40", $offsetX="-50")
+```
+````
 
 ```mermaid
 C4Context
@@ -692,5 +730,6 @@ BiRel(sysRooms, sysFin, "Posts Payment")
 
 UpdateElementStyle(perGuest, $fontColor="red", $bgColor="grey", $borderColor="red")
 UpdateRelStyle(sysTrans, sysCard, $textColor="blue", $lineColor="blue", $offsetY="-40", $offsetX="-50")
+UpdateRelStyle(sysCard, sysTrans, $textColor="blue", $lineColor="blue", $offsetY="-40", $offsetX="-50")
 ```
 
