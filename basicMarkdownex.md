@@ -678,8 +678,9 @@ Person(perClerk, "Hotel Clerk", "Takes bookings face to face or over the phone f
 
 System_Boundary(B4, "Bank Systems"){
 System(sysTrans, "Bank Transaction Processing System", "System that handles credits and debits to accounts")
-}
 System_Ext(sysCard, "Credit Card Processing System", "System that processes credit card payments, may be external to the bank")
+}
+
 
 
 BiRel(perClerk, sysRooms, "Makes Booking")
@@ -691,8 +692,8 @@ Rel(sysCard, sysTrans, "Affirms/Denies Card")
 Rel(sysTrans, sysRooms, "Confirms/Denies Charge")
 BiRel(sysRooms, sysFin, "Posts Payment")
 
-UpdateElementStyle(perGuest, $fontColor="red", $bgColor="grey", $borderColor="red")
-UpdateRelStyle(sysTrans, sysCard, $textColor="blue", $lineColor="blue", $offsetY="-40", $offsetX="-50")
+UpdateElementStyle(perGuest, $fontColor="black", $bgColor="grey", $borderColor="red")
+UpdateRelStyle(sysTrans, sysCard, $textColor="blue", $lineColor="blue", $offsetY="40", $offsetX="-50")
 UpdateRelStyle(sysCard, sysTrans, $textColor="blue", $lineColor="blue", $offsetY="-40", $offsetX="-50")
 ```
 ````
