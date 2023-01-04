@@ -523,10 +523,9 @@ flowchart TD
 	R --> S[Enjoy]
 ```
 
-````
-
 If you prefer your flow charts to run left to right, change the **TD** in the line starting *flowchart* to **LR**.
 
+````
 ```mermaid
 flowchart LR
     A[Start] --> B{Tea?}
