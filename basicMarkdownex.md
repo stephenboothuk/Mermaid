@@ -525,7 +525,7 @@ flowchart TD
 
 ````
 ```mermaid
-flowchart TD
+flowchart LR
     A[Start] --> B{Tea?}
 	B --> |Yes| C[Get Cup] & D[Fill and Put Kettle On]
     B --> |No| U[OK, Maybe Later]
@@ -553,7 +553,7 @@ flowchart TD
 ````
 
 ```mermaid
-flowchart TD
+flowchart LR
     A[Start] --> B{Tea?}
 	B --> |Yes| C[Get Cup] & D[Fill and Put Kettle On]
     B --> |No| U[OK, Maybe Later]
