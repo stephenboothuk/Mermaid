@@ -523,6 +523,62 @@ flowchart TD
 	R --> S[Enjoy]
 ```
 
+````
+```mermaid
+flowchart TD
+    A[Start] --> B{Tea?}
+	B --> |Yes| C[Get Cup] & D[Fill and Put Kettle On]
+    B --> |No| U[OK, Maybe Later]
+	C --> E{Milk?}
+	E --o |Yes| F[Add Milk to Cup]
+	E --x |No| G{Sugar?}
+	F --> G
+	G --o |Yes| H(How Many)
+    G --x |No| I{Kettle Boiling?}
+    H --> |Number| T[Add Specified Sugar Amount to Cup]
+	T --> I
+    D --> I
+	I --> |No| J[Wait]
+	J --> I
+	I --> |Yes| K[Get Tea Pot]
+	K --> L[Add Boiling Water to Tea Pot]
+	L --> M[Empty Tea Pot]
+	M --> N[Add Tea to Tea Pot]
+	N --> O[Add Boiling Water to Tea Pot]
+	O --> P[Wait]
+	P --> Q[Pour Tea in to Cup]
+	Q --> R[Stir Tea]
+	R --> S[Enjoy]
+```
+````
+
+```mermaid
+flowchart TD
+    A[Start] --> B{Tea?}
+	B --> |Yes| C[Get Cup] & D[Fill and Put Kettle On]
+    B --> |No| U[OK, Maybe Later]
+	C --> E{Milk?}
+	E --o |Yes| F[Add Milk to Cup]
+	E --x |No| G{Sugar?}
+	F --> G
+	G --o |Yes| H(How Many)
+    G --x |No| I{Kettle Boiling?}
+    H --> |Number| T[Add Specified Sugar Amount to Cup]
+	T --> I
+    D --> I
+	I --> |No| J[Wait]
+	J --> I
+	I --> |Yes| K[Get Tea Pot]
+	K --> L[Add Boiling Water to Tea Pot]
+	L --> M[Empty Tea Pot]
+	M --> N[Add Tea to Tea Pot]
+	N --> O[Add Boiling Water to Tea Pot]
+	O --> P[Wait]
+	P --> Q[Pour Tea in to Cup]
+	Q --> R[Stir Tea]
+	R --> S[Enjoy]
+```
+
 #### Class Diagrams
 
 Class diagrams are a type of UML diagram that describes classes in Object-Oriented Programming.  The below describes a simplified fragment of a HR system with a superclass Employee and two subclasses, Manager and Salesperson.  Each class has a name, a list of attributes (variables) and a list of methods (functions).  An object of class Employee has all of the attributes and methods of the Employee class but not of the Manager or Salesperson classes.  An object of the class Manager inherits the attributes and methods of the Employee class and additionally has those of the Manager class but not those the Salesperson class.  Similarly an object of the Salesperson class inherits the attributes and methods of the Employee class and additionally has those of Salesperson class but not of the Manager class.
