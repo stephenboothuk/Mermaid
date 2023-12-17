@@ -213,7 +213,7 @@ next 10 and so on\.
 
 ### Inline Code
 
-To include program code, also works for mathematical formulas (although Markdown doesn't have the abilituy to represent maths that LaTeX does),
+To include program code, also works for mathematical formulas (although Markdown doesn't have the ability to represent maths that LaTeX does),
 enclose it between a backtick \(also called a backquote\), \`.
 
 e.g. This is some \`code\`
@@ -295,7 +295,7 @@ to render the diagram\.
 
 ### Diagrams \(Mermaid\)
 
-A variety of basic diagrams can be produced in Markdown through the use of the **Markdown** extension to the language.  Some Markdown editors and viewers (such as the one built into Github) have Mermaid support built in whilst others \(e.g. VS.code\) will require a plugin\.  If the diagram is required for a non-Markdown document then you may wish to use the online Mermaid editior Mermaid.Live \(https://mermaid.live/\) and export to a graphic using Kroki \(via a button in the *Actions* panel\).  
+A variety of basic diagrams can be produced in Markdown through the use of the **Mermaid** extension to the language.  Some Markdown editors and viewers (such as the one built into Github) have Mermaid support built in whilst others \(e.g. VS.code\) will require a plugin\.  If the diagram is required for a non-Markdown document then you may wish to use the online Mermaid editior Mermaid.Live \(https://mermaid.live/\) and export to a graphic using Kroki \(via a button in the *Actions* panel\).  
 
 Examples of Mermaid diagrams include:
 #### Graph
