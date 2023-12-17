@@ -816,6 +816,22 @@ pie title First Programming Language Learned
 
 Note that pie charts are often shunned in serious data analysis due to issues of interpretation.  Humans are poor at interpreting the comparative difference between angles and tend to interpret based on area so may weight areas more heavily than they should.  For example in the example above the figure for Pascal is close to 1.5 times that for BASIC but an intial impression may be that the difference is greater than that.
 
+#### Conversation Diagram
+A conversation diagram is a very highlevel (typically IDEF0) diagram which shows the systems involved in a process and the connections betqween them.  Mermaid does not currently support this diagram type but it is possible to 'fake' one by using the flowchart diagram type.  Consider using a Context diagram instead.
+
+````
+```mermaid
+flowchart TD
+D[OrderProcessing] <--> B[WebPay]
+E[Tills] <--> F[StockControl]
+A[SAP FI] <--> B
+A <--> C[EPOS]
+E <--> C
+D <--> F
+```
+````
+**Many Mermaid interpreters, including GitHub do not render this as it breaks a numnber of the rules of Mermaid.  To see this rendered, copy and paste into https://mermaid.live/**
+
 #### Requirements Diagram
 
 ```mermaid
