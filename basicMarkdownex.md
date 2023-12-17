@@ -687,7 +687,7 @@ erDiagram
 ```
 
 #### State Diagram
-
+A state diagram describes the states an object (physical or virtual) goes through in a process.
 ````
 ```mermaid
 stateDiagram-v2 Invoice
@@ -905,6 +905,30 @@ mindmap
 ```
 ````
 
-**GitHub does not render mindmap Mermaid.  To see this mindmap rendered, copy and paste into https://mermaid.live/**
+**GitHub does not currently render mindmap Mermaid completely.  To see this mindmap rendered, copy and paste into https://mermaid.live/**
 
-The icons shown beign used here are from a service called Font Awesome (https://fontawesome.com/v4/icons/), support varies between viewers.
+```mermaid
+mindmap
+	root((Parking Charges))
+    ::icon(fa fa-car)
+		Penalty Charge Notice
+			Issued by Police or Local Council
+			Legally Enforeable
+                Based in Law 
+					Terms and Conditions Presumed
+                    ::icon(fa fa-book)
+				Can result in points
+                ::icon(fa fa-id-card)
+			Can be Appealed at Arbitration
+				Approximately 70\% are Overturned at Appeal
+		Parking Charge Notice
+			Issued By Private Company
+			Have to Sue to Enforce
+				Technically a Contract Violation
+			Based in Displayed Terms and Conditions
+				Terms and Conditions Must Be Visible
+			Can be Appealed to Issuer or at Arbitration
+				Approximately 94% are Overturned at Arbitration
+```
+
+The icons shown beign used here are from a service called Font Awesome (https://fontawesome.com/v4/icons/), support varies between viewers (they don't show in GitHub but do at https://mermaid.live/.
