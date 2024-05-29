@@ -329,6 +329,8 @@ A graph database stores descriptions of *entities* and the *relationships* betwe
 ```
 ````
 
+https://www.mermaidchart.com/raw/8c349b65-ace2-4cbb-ad97-acb19e2b7052?theme=dark&version=v0.1&format=svg
+
 ```mermaid
 
   graph LR
